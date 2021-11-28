@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS media query on a link element -->
+    <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Servicliente247</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <header class="header">
+        <img src="images/pqr.jpg" />
+      </header>
+      <main class="main">
+        <div class="parrafo">
+          <p>
+            Bienvenido al sistema de peticiones, quejas, reclamos y otros de
+            <i><b>Serviclient247</b></i
+            >, mediante el cual usted como cliente o usuario puede expresar sus
+            solicitudes, inconformidad o felicitaciones relacionadas con
+            nuestros servicios.
+          </p>
+        </div>
+        <div class="linea">
+          _______________________________________________________________
+        </div>
+        <div class="p">
+          <label>
+            Petición
+            <input type="radio" value="peticion" name="peticion" class="p" />
+          </label>
+        </div>
+
+        <div class="q">
+          <label>
+            Queja
+            <input type="radio" value="queja" name="peticion" class="q" />
+          </label>
+        </div>
+
+        <div class="r">
+          <label>
+            Reclamo
+            <input type="radio" value="reclamo" name="peticion" class="r" />
+          </label>
+        </div>
+
+        <div class="otr">
+          <label>
+            Felicitar
+            <input type="radio" value="feliz" name="peticion" class="otr" />
+          </label>
+        </div>
+
+        <div class="btn">
+          <input type="button" value="Siguiente" class="boton" />
+        </div>
+      </main>
+      <footer class="footer">
+        <a v-on:click="q" href="#">¿Qué es una queja?</a>
+        <a href="#">¿Qué es una petición?</a>
+        <a href="#">¿Qué es un reclamo?</a>
+      </footer>
+    </div>
+  </body>
+  <script src="js/vue.js"></script>
+  <script src="js/proyect.js"></script>
+</html>
