@@ -7,13 +7,19 @@ Vue.component('cabecera', {
 });
 
 Vue.component('navegacion', {
+    data() {
+        return {
+            check: 0
+        }
+    },
+
     template: //html
         `
     <div>
         <div class="p">
             <label>
             Petición
-                <input type="radio" value="peticion" name="peticion" class="p" />
+                <input  v-model="check" @click="check=1"  type="radio" value="peticion" name="peticion" class="p" />
             </label>
         </div>
     
@@ -40,7 +46,8 @@ Vue.component('navegacion', {
         </div>
     </div>
 
-    `
+    `,
+
 });
 
 Vue.component('principal', {
@@ -53,15 +60,16 @@ Vue.component('principal', {
             solicitudes, inconformidad o felicitaciones relacionadas con
             nuestros servicios.
           </p>
+          <p><b>Queja:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in molestiae sit tempore recusandae omnis exercitationem nisi dolore eum, quo, expedita velit labore quam non illo. Necessitatibus quasi velit id.</p>
+          <p><b>Petición:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in molestiae sit tempore recusandae omnis exercitationem nisi dolore eum, quo, expedita velit labore quam non illo. Necessitatibus quasi velit id.</p>
+          <p><b>Reclamo:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in molestiae sit tempore recusandae omnis exercitationem nisi dolore eum, quo, expedita velit labore quam non illo. Necessitatibus quasi velit id.</p>
         </div>`
 });
 
 Vue.component('pie', {
     template: //html
         `<footer class="footer">
-            <a href="#">¿Qué es una queja?</a>
-            <a href="#">¿Qué es una petición?</a>
-            <a href="#">¿Qué es un reclamo?</a>
+            
     </footer>
     
     `
@@ -72,13 +80,30 @@ Vue.component('boton', {
         `
     <div class="btn">
         <div>
-            <input type="button" value="Siguiente" class="boton" />
+            <input type="button" value="Siguiente"  class="boton" />
         </div>
     </div>
     `
-})
+});
+
+Vue.component('formulario', {
+    template: //html
+        `
+    <form class="formulario">
+        <label for="name">Nombre</label><input type="text" class="inDat" v-model="name">
+        <label>Correo</label><input type="email" class="inDat" v-model="email">
+        <label>Detalle</label><textarea name="detalle" id="detalle" cols="30" rows="10"></textarea>
+        <input type="submit" class="boton" value="Enviar" @click="saveClient">
+    </form>
+    `
+});
 
 new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        check: 0,
+        ver: 0
+
+    }
 });
 

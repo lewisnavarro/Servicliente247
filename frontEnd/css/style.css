@@ -18,10 +18,10 @@ a {
   text-decoration: none;
 }
 p {
-    margin: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
-  }
+  margin: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
 
 .main > div {
   min-height: 100%;
@@ -44,8 +44,6 @@ p {
     "parrafo"
     "footer";
 }
-
-
 
 .header {
   grid-area: header;
@@ -101,8 +99,6 @@ a:hover {
   grid-area: parrafo;
 }
 
- 
-
 .p {
   grid-area: p;
 }
@@ -129,4 +125,34 @@ a:hover {
 }
 .boton:hover {
   color: rgb(34, 36, 34);
+}
+
+.formulario {
+  border: 1px solid rgb(171, 175, 171);
+  grid-area: main;
+  height: 500px;
+  margin-bottom: 10px;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.btn {
+  width: 150px;
+  /* margin: 20px; */
+  border: none;
+  background: rgb(8, 154, 212);
+  border-radius: 4px;
+  padding: 10px;
+}
+.inDat {
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+}
+inDat:focus {
+  border-color: rgb(8, 154, 212);
 }

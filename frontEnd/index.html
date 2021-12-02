@@ -14,11 +14,12 @@
         <cabecera></cabecera>
       </div>
       <div>
-        <navegacion class="navegacion"></navegacion>
+        <navegacion class="navegacion" v-model="check"></navegacion>
       </div>
       <div>
-        <principal></principal>
-        <boton></boton>
+        <principal v-if="ver==0"></principal>
+        <boton v-if="check==1"></boton>
+        <formulario v-if="ver==1"></formulario>
       </div>
       <pie></pie>
     </div>
