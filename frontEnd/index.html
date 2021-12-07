@@ -9,19 +9,28 @@
     <title>Servicliente247</title>
   </head>
   <body>
-    <div class="container" id="app">
-      <div class="header">
-        <cabecera></cabecera>
+    <div class="contenedor" id="app">
+     
+      <header class="header">
+        <img src="images/pqr.jpg" />
+       </header>
+      <nav class="navegacion">
+        <ul>
+          <li><a @click="opcion=1, tipo='p'" href="#">Petición</a></li>
+          <li><a @click="opcion=2, tipo='q'"  href="#">Queja</a></li>
+          <li><a @click="opcion=3, tipo='r'" href="#">Reclamo</a></li>
+          <li><a @click="opcion=4, tipo='f'" href="#">Felicitación</a></li>
+        </ul>
+      </nav>
+      <div class="principal">
+        <inicio v-if="opcion==0" class="principal"></inicio>
+        <peticion v-if="opcion==1" ></peticion>
+        <queja v-if="opcion==2"></queja>
+        <reclamo v-if="opcion==3"></reclamo>
+        <felicitar v-if="opcion==4"></felicitar>
+        <formulario v-if="opcion==1 || opcion==2 || opcion==3 || opcion==4"></formulario>
       </div>
-      <div>
-        <navegacion class="navegacion" v-model="check"></navegacion>
-      </div>
-      <div>
-        <principal v-if="ver==0"></principal>
-        <boton v-if="check==1"></boton>
-        <formulario v-if="ver==1"></formulario>
-      </div>
-      <pie></pie>
+      <footer class="footer"><p>&copy; 2021 Servicliente247</p></footer>
     </div>
   </body>
   <script src="js/vue.js"></script>
